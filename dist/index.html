@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Metodo Zero a Viral: criacao, aquecimento e validacao de contas para comecar a postar com mais clareza."
+    />
+    <title>Metodo Zero a Viral</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0b1310;
+        color: #e8f2eb;
+      }
+
+      #root {
+        min-height: 100vh;
+      }
+
+      .boot-msg {
+        max-width: 720px;
+        margin: 24px auto;
+        line-height: 1.6;
+        background: #111a16;
+        border: 1px solid #2b3f35;
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .boot-msg code {
+        color: #9dfb7a;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const root = document.getElementById('root');
+
+      if (window.location.protocol === 'file:') {
+        root.innerHTML = `
+          <div class="boot-msg">
+            Este projeto usa React + Vite. Abrir <code>index.html</code> direto gera tela branca.<br><br>
+            Execute no terminal:
+            <br><code>cd "C:\\Users\\salat\\Desktop\\Page"</code>
+            <br><code>npm install</code>
+            <br><code>npm run dev</code>
+          </div>
+        `;
+      } else {
+        const script = document.createElement('script');
+        script.type = 'module';
+        script.src = '/src/main.jsx';
+        document.body.appendChild(script);
+      }
+    </script>
+  </body>
+</html>
